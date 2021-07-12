@@ -4,8 +4,8 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path('', include('core.urls')),
-    path('management/', include('management.urls', namespace='management')),
+    path('schema-collaboration/', include('core.urls')),
+    path('schema-collaboration/management/', include('management.urls', namespace='management')),
     # path('comments/', include('comments.urls', namespace='comments')),
-    path('admin/', admin.site.urls),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    path('schema-collaboration/admin/', admin.site.urls),
+] + static('schema-collaboration/' + settings.STATIC_URL, document_root=settings.STATIC_ROOT)
