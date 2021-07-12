@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  schema-collaboration:
+    image: schema-collaboration
+    build:
+      dockerfile: Dockerfile
+      context: ./
+    environment:
+      FORCE_SQLITE3_DATABASE: 1
+      DEBUG: 0
+      PRODUCTION_CHECKS: 1
+
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD}
+      DATAMANAGER_USERNAME: ${DATAMANAGER_USERNAME}
+      DATAMANAGER_FULL_NAME: ${DATAMANAGER_FULL_NAME}
+      DATAMANAGER_PASSWORD: ${DATAMANAGER_PASSWORD}
+    volumes:
+        - ./data/database:/database
+    ports:
+      - "8082:80"
