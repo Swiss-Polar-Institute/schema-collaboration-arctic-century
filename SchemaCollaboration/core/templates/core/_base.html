@@ -6,36 +6,36 @@
 <head>
     <meta charset="utf-8">
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    <link rel="stylesheet" href="{% static '/external/bootstrap.min.css' %}"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Datatables -->
     {#    Selected Bootstarp4, jQuery3, DataTables, no concatenate#}
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.css"/>
+    <link rel="stylesheet" type="text/css" href="{% static '/external/dataTables.bootstrap4.css' %}"/>
 
     <!-- jquery -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{% static '/external/jquery.min.js' %}"></script>
     <link rel="stylesheet" type="text/css"
-          href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+          href="{% static '/external/jquery-ui.min.css' %}">
 
     <script type="text/javascript"
-            src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
+            src="{% static '/external/clipboard.min.js' %}"></script>
 
-    <script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.js"></script>
+    <script type="text/javascript" src="{% static '/external/jquery.dataTables.js' %}"></script>
+    <script type="text/javascript" src="{% static '/external/dataTables.bootstrap4.js' %}"></script>
 
     <!-- Datatables highlight -->
     {#    https://datatables.net/blog/2014-10-22#Released-code#}
     <script type="text/javascript"
-            src="https://cdn.datatables.net/plug-ins/1.10.21/features/searchHighlight/dataTables.searchHighlight.min.js"></script>
+            src="{% static '/external/dataTables.searchHighlight.min.js' %}"></script>
     <link rel="stylesheet" type="text/css"
-          href="https://cdn.datatables.net/plug-ins/1.10.21/features/searchHighlight/dataTables.searchHighlight.css">
-    <script type="text/javascript" src="https://bartaz.github.io/sandbox.js/jquery.highlight.js"></script>
+          href="{% static '/external/dataTables.searchHighlight.css' %}">
+    <script type="text/javascript" src="{% static '/external/jquery.highlight.js' %}"></script>
 
     <!-- Font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="{% static '/external/all.min.css' %}">
 
     <link rel="stylesheet" type="text/css" href="{% static '/css/css.css' %}">
     <style>{% block style %}{% endblock %}</style>
@@ -46,10 +46,10 @@
     {% block body_contents %}{% endblock %}
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+<script src="{% static '/external/popper.min.js' %}"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+<script src="{% static '/external/bootstrap.min.js' %}"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 {% include_static_extra_js %}
