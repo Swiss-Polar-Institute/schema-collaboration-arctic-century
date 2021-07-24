@@ -19,3 +19,4 @@ services:
         - ./data/database:/database
     ports:
       - "8082:80"
+    restart: unless-stopped
